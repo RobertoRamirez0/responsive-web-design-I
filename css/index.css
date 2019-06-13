@@ -68,11 +68,55 @@ h1, h2, h3, h4, h5 {
 	width: 880px;
 	margin: 0 auto;
 }
+@media (max-width: 800px){
+	.container {
+		width: 800px;
+	}
+	.right-side-image {
+		display: none;
+	}
+	.main-content {
+		width: 100%;
+	}
+	.contact {
+		width: 100%;
+	}
+	footer {
+		width:100%;
+	}
+	.left-side-heading {
+		width: 100%;
+		margin-top: 60px;
+		align-self:center;
+	}
+	.middle-img {
+		width: 100%;
+	}
+}
+@media (max-width: 500px){
+	.container {
+		width: 500px;
+	}
+}
 header nav {
 	box-sizing: border-box;
 	/*display: inline-block;*/
 	width: 500px;
 	margin-top: 35px;
+}
+@media (max-width: 800px) {
+	header nav {
+		align-self: center;
+		margin: 0 auto;
+		padding-top: 30px;
+	}
+}
+@media (max-width:500px) {
+	header nav {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 }
 header nav a {
 	margin-right: 35px;
@@ -81,9 +125,40 @@ header nav a {
   	text-decoration: none;
 	/*display: inline-block;*/
 }
+@media (max-width:500px){
+	header nav a {
+		width: 100%;
+		margin-right: 0px;
+		align-self: center;
+		font-size: 130%;
+		padding-top: 3%;
+		padding-bottom:  3%;
+		border-top: 1px solid black;
+		text-align: center;
+		text-decoration: none;
+	}
+	header nav a:hover {
+		background: black;
+		color: white;
+		text-decoration: none;
+	}
+}
+@media (max-width: 500px) {
+	#nav-contact {
+		border-bottom: 1px solid black;
+	}
+}
 /* used default flex values to put nav and log on the same line*/
 .flex-header {
 	display: flex;
+}
+@media (max-width: 800px) {
+	.flex-header {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: center;
+		margin-top: 30px;
+	}
 }
 header nav a:hover {
 	text-decoration: underline;
@@ -92,7 +167,7 @@ header nav a:first-child {
 	margin-left: 0;
   }
   
-  header nav a:last-child {
+header nav a:last-child {
 	margin-right: 0;
   }
 header .logo {
@@ -100,7 +175,25 @@ header .logo {
 	margin-left: 140px;
 	margin-top: 25px;
 }
+@media (max-width: 800px){
+	header .logo {
+		width: 20%;
+		margin: 0 auto;
+	}
+}
+@media (max-width: 500px){
+	header .logo {
+		width: 50%;
+	}
+}
 /* upped the width to 900 px and used space-evenly to space out elements*/
+@media (max-width: 800px){
+	.top-page-header {
+		display: flex;
+		flex-direction: column;
+	}
+}
+ 
 .left-side-heading {
 	box-sizing: border-box;
 	/*display: inline-block;*/
@@ -110,6 +203,11 @@ header .logo {
 	vertical-align: top;
 	display: flex;
 	justify-content: space-evenly;
+}
+@media (max-width: 800px){
+	.left-side-heading {
+		margin-top: 60px;
+	}
 }
 button {
 	background: white;
@@ -149,15 +247,37 @@ button:hover {
   	margin-top: 76px;
   	padding-top: 39px;
 }
+@media (max-width: 500px){
+	.main-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
 /* used flex box default values here to align elements on the same line*/
 .main-content .top-content {
 	padding: 0px 10px;
 	display: flex;
 }
+@media (max-width: 500px) {
+	.main-content .top-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
 .main-content .top-content .text-content {
 	width: 410px;
 	/*display: inline-block;*/
 	margin-right: 34px;
+}
+@media (max-width: 500px) {
+	.main-content .top-content .text-content {
+		align-self: center;
+		padding-bottom: 10%;
+		margin-right: 0;
+		width: 100%;
+	}
 }
 .main-content .top-content .text-content:last-child {
 	margin-right: 0;
@@ -172,13 +292,27 @@ button:hover {
 	padding: 0 10px;
 	display: flex;
 }
-  
+@media (max-width: 500px) {
+	.main-content .bottom-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;margin-top: 
+	}
+}
 .main-content .bottom-content .text-content {
 	width: 275px;
 	/*display: inline-block;*/
 	margin-right: 12px;
 }
-  
+@media (max-width: 500px) {
+	.main-content .bottom-content .text-content {
+		align-self: center;
+		padding-bottom: 10%;
+		margin-right: 0;
+		width: 100%;
+	}
+}
 .main-content .bottom-content .text-content:last-child {
 	margin-right: 0;
 }
